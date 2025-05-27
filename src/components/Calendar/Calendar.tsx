@@ -26,7 +26,8 @@ function Calendar() {
   const getAllEvents = async () => {
     setLoadingSpinner(true);
     try {
-      const response = await fetch("http://localhost:8002/wp-json/wp/v2/event?_fields=title,event_start_date,event_end_date,event_description,event_location", {
+      const response = await fetch("https://studenter.miun.se/~hafa2300/writeable/dt140g/forma_ro_demo/wordpress/wp-json/wp/v2/event?_fields=title,event_start_date,event_end_date,event_description,event_location", {
+
         method: "GET",
         headers: {
           "Content-Type": "application/json"

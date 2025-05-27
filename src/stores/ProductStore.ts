@@ -108,7 +108,7 @@ class ProductStore {
         this.error = "";
         try {
             const response = await fetch(
-                "http://localhost:8002/wp-json/wp/v2/product?_fields=title,product_price,product_description,product_thumbnail,product_thumbnail_alt,id,date,product_category",
+                "https://studenter.miun.se/~hafa2300/writeable/dt140g/forma_ro_demo/wordpress/product?_fields=title,product_price,product_description,product_thumbnail,product_thumbnail_alt,id,date,product_category",
                 {
                     method: "GET",
                     headers: {
@@ -177,7 +177,7 @@ class ProductStore {
 
 
         try {
-            const response = await fetch(`http://localhost:8002/wp-json/wp/v2/product/${productId}`);
+            const response = await fetch(`https://studenter.miun.se/~hafa2300/writeable/dt140g/forma_ro_demo/wordpress/product/${productId}`);
 
             if (response.ok) {
                 const data = await response.json();
