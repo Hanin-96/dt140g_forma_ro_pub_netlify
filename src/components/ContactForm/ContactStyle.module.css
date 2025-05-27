@@ -1,0 +1,54 @@
+.contactFormContainer {
+    overflow: hidden;
+    max-height: 0;
+    background-color: #D9D1C3;
+
+}
+
+.contactFormSlideDown {
+    animation: 0.5s forwards slideDown linear;
+    max-height: 0;
+}
+
+.contactFormSlideUp {
+    max-height: 70rem;
+    animation: 0.5s forwards slideUp linear;
+}
+
+.contactFormContainer  input, 
+.contactFormContainer select, 
+.contactFormContainer textarea {
+    border-radius: 0.5rem;
+    border: none;
+}
+
+input[type=checkbox] {
+    margin: 4px 0 0;
+    line-height: normal;
+    width: 20px;
+    height: 20px;
+}
+
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+    }
+
+    to {
+        max-height: 70rem;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        max-height: 70rem;
+
+    }
+
+    to {
+        max-height: 0;
+    }
+}
+
+

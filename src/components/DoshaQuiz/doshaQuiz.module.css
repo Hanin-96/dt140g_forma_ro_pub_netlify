@@ -1,0 +1,42 @@
+.quizContainer {
+  background: #305369;
+  border-radius: 1rem;
+}
+
+.quizContainer ul li {
+  text-decoration: none;
+  list-style: none;
+  color: #1e1e1e;
+  font-size: 16px;
+  background: rgb(255, 255, 255, 0.6);
+  border-radius: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.quizContainer ul .selectedAnswer {
+  background: white;
+  border: 1px solid #305369;
+}
+
+
+.quizContainer button:disabled {
+  background: #e7e8e9;
+  color: #D9D1C3;
+  cursor: not-allowed;
+}
+
+.quizContainer button:disabled svg {
+  stroke: #D9D1C3;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.result p {
+  color: white;
+  font-size: 1.8rem;
+}

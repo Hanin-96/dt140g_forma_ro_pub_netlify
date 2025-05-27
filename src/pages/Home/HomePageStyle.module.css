@@ -1,0 +1,28 @@
+.imageCircle {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: circleAnim 60s linear infinite;
+}
+
+.borderAyurveda {
+    border: 3px dashed #E09F3E;
+}
+
+.borderKeramik {
+    border: 3px dashed #D58B6A;
+}
+
+@keyframes circleAnim {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg); 
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

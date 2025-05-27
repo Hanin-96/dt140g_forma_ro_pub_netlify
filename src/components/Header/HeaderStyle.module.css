@@ -1,0 +1,244 @@
+.header {
+    background-color: #D9D1C3;
+    padding: 1rem;
+    box-shadow: 0 2px 5px -1px rgb(30, 30, 30, 0.5);
+    position: relative;
+    z-index: 100;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100rem;
+    width: 100%;
+}
+
+.header ul {
+    padding: 0.5rem;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.header ul li a {
+    padding: 1rem;
+}
+
+.navMain li {
+    font-size: 1.8rem;
+}
+
+
+.navMain .menuItem {
+    position: relative;
+    width: 100%;
+}
+
+.navMain .menuItem ul {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px -3px rgb(30, 30, 30, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0.5rem;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.navMain .menuItem ul li a {
+    text-decoration: none;
+    color: #1e1e1e;
+    display: block;
+    padding: 0.5rem;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffff;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: transform 0.3s ease;
+
+}
+
+.navMain .menuItem:hover .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    background-color: white;
+    border-radius: 0 0 1rem 1rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 10px -3px rgb(30, 30, 30, 0.5);
+}
+
+.navMain .menuItem .dropdown:hover {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+}
+
+.navMain .menuItem:hover .dropdown {
+    display: block;
+    opacity: 1;
+}
+
+.navMain .menuItem a.active {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px -3px rgb(30, 30, 30, 0.5);
+    z-index: 10;
+    text-decoration: underline;
+}
+
+.navMain .menuItem a:hover {
+    border-radius: 1rem 1rem 0 0;
+    text-decoration: none;
+}
+
+.navMain .menuItem:hover>a {
+    border-radius: 1rem 1rem 0 0;
+    background-color: white;
+    box-shadow: 0 0 10px -3px rgb(30, 30, 30, 0.5);
+    z-index: 15;
+}
+
+
+
+/*......................................hamburger menu.......................................*/
+
+
+.hamburger {
+    display: none;
+}
+
+.navMobil {
+    display: none !important;
+}
+
+
+@media all and (max-width: 750px) {
+    /*................Mobilmeny..................*/
+
+    .navMain {
+        display: none !important;
+    }
+
+    .navMobil {
+        display: flex !important;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .header ul {
+        gap: 0;
+    }
+
+
+    .hamburger {
+        display: block;
+        position: fixed;
+        z-index: 30;
+        padding: 1rem 1.2rem;
+        cursor: pointer;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .header .active {
+        background-color: unset;
+        box-shadow: none;
+    }
+
+    .header ul li a:hover {
+        background-color: unset;
+        box-shadow: unset;
+    }
+
+
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+        display: none;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(0.8rem) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(0) rotate(-45deg);
+    }
+
+    /*Navbar dropdown*/
+    .navMobil ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        justify-content: center;
+        z-index: 25;
+        display: flex;
+        animation: 0.3s linear navAnimation;
+        background-color: rgb(217, 209, 195, 0.9);
+        padding-top: 2rem;
+    }
+
+    .navMobil>ul {
+        overflow-y: scroll;
+    }
+
+    .navMobil ul li {
+        font-size: 1.8rem;
+    }
+
+    .navMobil>ul>li {
+        margin: 1rem 0;
+        padding: 1rem 0;
+        font-size: 2rem;
+    }
+
+    .navMobil>ul>li>a {
+        font-weight: bold;
+    }
+
+    .navMobil>ul>li>ul {
+        padding: 0;
+    }
+
+    .navMobil>ul>li>ul>li {
+        padding: 1rem 0;
+    }
+
+
+    /*linjer för hamburgar menu*/
+    .bar {
+        display: block;
+        min-width: 2.5rem;
+        height: 0.3rem;
+        margin: 0.5rem auto;
+        transition: all 0.3s ease-in-out;
+        background-color: #1e1e1e;
+    }
+
+    @keyframes navAnimation {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+
+}

@@ -1,0 +1,22 @@
+.contactpageInfo>div {
+    display: flex;
+    max-width: 100rem;
+    width: 100%;
+    margin: 0 auto;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.contactpageInfo p {
+    max-width: 55ch;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.contactpageInfo h2 {
+    font-size: 3.2rem;
+}
+
+.contactpageInfo h3 {
+    font-size: 2.4rem;
+}
