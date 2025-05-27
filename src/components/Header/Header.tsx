@@ -75,7 +75,7 @@ function Header() {
             <header className={HeaderModuleStyle.header}>
                 <div className={HeaderModuleStyle.headerContainer}>
                     <Link to="/hem">
-                        <img src={logotypHeader} alt="logotyp" style={{ maxWidth: "150px", width: "100%" }} loading="lazy" />
+                        <img src={logotypHeader} alt="logotyp" height={100} width={150} style={{ maxWidth: "150px", width: "100%" }} loading="lazy" />
                     </Link>
 
                     <nav>
