@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import LoadingSpinnerStyle from '../LoadingSpinner/LoadingSpinnerStyle.module.css';
 import parse from 'html-react-parser';
-import doshaPostsStyle from './DoshaPosts.module.css'
+//import doshaPostsStyle from './DoshaPosts.module.css'
 import { DoshaType } from '../../types/DoshaQuiz';
 import { ChevronDown } from 'lucide-react';
 

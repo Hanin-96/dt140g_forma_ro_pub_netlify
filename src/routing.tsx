@@ -11,7 +11,6 @@ import AyurvedaPostsPage from "./pages/Ayurveda/AyurvedaPostsPage";
 import ProductPage from "./pages/Ceramic/ProductPage";
 import PostPage from "./pages/Ayurveda/PostPage";
 import CalendarPage from "./pages/Calendar/CalendarPage";
-import CeramicPostsPage from "./pages/Ceramic/CeramicAllPostsPage";
 import CeramicAllPostsPage from "./pages/Ceramic/CeramicAllPostsPage";
 import CeramicPostPage from "./pages/Ceramic/CeramicPostPage";
 
